@@ -1,6 +1,6 @@
 import random
 
-level = int( input('Choose your defficulty level. 1 for Easy, 2 for Meidum, 3 for Hard ?'))
+level = int( input('Choose your difficulty level. 1 for Easy, 2 for Medium, 3 for Hard ?'))
 
 if level == 1 :
 	number = random.randint(1,50)
@@ -38,12 +38,12 @@ while attempt < max_attempts :
 	remaining = max_attempts - attempt
 
 	if int(guess) > number :
-		print('You are thinking higher')
+		print('Too High')
 		print(f'Total {remaining} chances remain')
 		continue
 
 	elif int(guess) < number :
-		print('You are Thinking lower')
+		print('Too Low')
 		print(f'Total {remaining} chances remain')
 		continue
 	
@@ -51,6 +51,6 @@ while attempt < max_attempts :
 		print(f'You are Winner. Correct number is : {number}, You Win in only {attempt} attempts')
 		break
 if attempt == max_attempts and guess != number :
-	print(f"You're Loose !!! Better Luck next time, The number was {number}")
+	print(f"You're Lose !!! Better Luck next time, The number was {number}")
 
 
