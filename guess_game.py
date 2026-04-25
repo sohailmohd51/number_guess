@@ -20,7 +20,8 @@ while True:
 			print(f'You have {max_attempts} chances')
 	except ValueError:
 		print("Wrong value entered, please choose only numbers")
-		break
+		continue
+	
 	attempt = 0
 	
 	while attempt < max_attempts :
