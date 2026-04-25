@@ -1,23 +1,26 @@
 import random
 
 while True:
-	try:
-		level = int( input('Choose your difficulty level. 1 for Easy, 2 for Medium, 3 for Hard ?'))
-		
-		if level == 1 :
+	level = input('Choose your difficulty level. 1 for Easy, 2 for Medium, 3 for Hard ?')
+	if level == "exit":
+		print("Game Exit")
+		break
+	try:	
+		if int(level) == 1 :
 			number = random.randint(1,50)
 			max_attempts = 10
 			print(f'You have {max_attempts} chances')
 			
-		elif level == 2 :
+		elif int(level) == 2 :
 			number = random.randint(1,100)
 			max_attempts = 8
 			print(f'You have {max_attempts} chances')
 		
-		else :
+		elif int(level) == 3 :
 			number = random.randint(1,200)
 			max_attempts = 6
 			print(f'You have {max_attempts} chances')
+				
 	except ValueError:
 		print("Wrong value entered, please choose only numbers")
 		continue
